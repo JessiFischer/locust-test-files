@@ -15,7 +15,6 @@ class UserBehavior(TaskSet):
         self.urls_on_current_page = []
         for l in link_elements:
           if "href" in l.attrib:
-            if l.attrib["href"] <> "/user/logout":
                 self.urls_on_current_page.append(l.attrib["href"])
 
     @task(30)
